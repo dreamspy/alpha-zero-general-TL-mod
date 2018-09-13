@@ -21,7 +21,7 @@ class RandomPlayer():
         return a
 
 
-class HumanTicTacToePlayer():
+class HumanPlayer():
     def __init__(self, game):
         self.game = game
 
@@ -46,7 +46,7 @@ class HumanTicTacToePlayer():
 
         return a
 
-class GreedyTicTacToePlayer():
+class GreedyPlayer():
     def __init__(self, game):
         self.game = game
 
