@@ -4,8 +4,8 @@ from othello.pytorch.NNet import NNetWrapper as nn
 from utils import *
 
 args = dotdict({
-    'numIters': 1000,
-    'numEps': 100,
+    'numIters': 100,
+    'numEps': 10,
     'tempThreshold': 15,
     'updateThreshold': 0.6,
     'maxlenOfQueue': 200000,
@@ -21,7 +21,7 @@ args = dotdict({
 })
 
 if __name__=="__main__":
-    g = Game(6)
+    g = Game(3)
     nnet = nn(g)
 
     if args.load_model:

@@ -18,7 +18,7 @@ any agent.
 """
 
 # g = OthelloGame(6)
-g = TicTacToeGame(6)
+g = TicTacToeGame(3)
 
 # all players
 rp = RandomPlayer(g).play
@@ -26,11 +26,11 @@ gp = GreedyPlayer(g).play
 hp = HumanPlayer(g).play
 
 # nnet players
-n1 = NNet(g)
-n1.load_checkpoint('./pretrained_models/tictactoe/keras/','best-azg2.pth.tar')
-args1 = dotdict({'numMCTSSims': 50, 'cpuct':1.0})
-mcts1 = MCTS(g, n1, args1)
-n1p = lambda x: np.argmax(mcts1.getActionProb(x, temp=0))
+# n1 = NNet(g)
+# n1.load_checkpoint('./pretrained_models/tictactoe/keras/','best-azg2.pth.tar')
+# args1 = dotdict({'numMCTSSims': 50, 'cpuct':1.0})
+# mcts1 = MCTS(g, n1, args1)
+# n1p = lambda x: np.argmax(mcts1.getActionProb(x, temp=0))
 
 
 #n2 = NNet(g)
@@ -39,7 +39,7 @@ n1p = lambda x: np.argmax(mcts1.getActionProb(x, temp=0))
 #mcts2 = MCTS(g, n2, args2)
 #n2p = lambda x: np.argmax(mcts2.getActionProb(x, temp=0))
 
-arena = Arena.Arena(rp, rp, g, display=display)
+arena = Arena.Arena(rp, hp, g, display=display)
 oneWon, twoWon, draws = arena.playGames(2, verbose=True)
 
 print("oneWon / twoWon / draws")

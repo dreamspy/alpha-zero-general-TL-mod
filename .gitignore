@@ -59,3 +59,17 @@ target/
 
 .DS_Store
 **/.DS_Store
+<<<<<<< HEAD
+=======
+
+temp/
+
+\.idea/alpha-zero-general-TL-mod\.iml
+\.idea/misc\.xml
+\.idea/modules\.xml
+\.idea/vcs\.xml
+\.idea/workspace\.xml
+\.idea
+
+venv/
+>>>>>>> 18fddd6... coach.py, fixed win count printout
