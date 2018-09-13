@@ -6,8 +6,8 @@ from tictactoe.keras.NNet import NNetWrapper as nn
 from utils import *
 
 args = dotdict({
-    'numIters': 100,
-    'numEps': 10,
+    'numIters': 1000,
+    'numEps': 100,
     'tempThreshold': 15,
     'updateThreshold': 0.6,
     'maxlenOfQueue': 200000,
